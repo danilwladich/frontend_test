@@ -1,0 +1,56 @@
+.options {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		cursor: pointer;
+		&_input {
+			appearance: none;
+			position: absolute;
+			&:focus-visible {
+				box-shadow: none;
+			}
+		}
+
+		&_circle {
+			flex: 0 0 auto;
+			display: block;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 100%;
+			border: 4px solid #fff;
+			padding: 0.25rem;
+
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				border-radius: 100%;
+				transition: background 0.2s;
+				background: transparent;
+			}
+		}
+		&:has(input:checked) &_circle::before {
+			background: #fff;
+		}
+
+		&:has(input:focus-visible) {
+			box-shadow: 0 0 0 2px #fff;
+		}
+
+		&_label {
+			transition: color 0.2s;
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		&:has(input:checked) &_label {
+			color: #fff;
+			font-weight: 400;
+		}
+	}
+}

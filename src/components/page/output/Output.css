@@ -1,0 +1,8 @@
+.output {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  text-align: center;
+}
+.output span:not(:last-child)::after {
+  content: " ";
+}

@@ -1,0 +1,269 @@
+.footer {
+  position: relative;
+}
+.footer .container {
+  position: relative;
+  background: #151619;
+  border-top: solid 1px #000;
+  z-index: 10;
+  overflow: hidden;
+}
+.footer__row {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer__row > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+}
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__logo_container {
+  cursor: pointer;
+  padding: 0.5rem;
+  position: relative;
+}
+.footer__logo_container:hover .footer__logo_text {
+  color: #a1a5b3;
+}
+.footer__logo_container:hover .footer__logo_border {
+  border-color: #7d4b0b;
+  -webkit-animation: spin 1s linear;
+          animation: spin 1s linear;
+}
+.footer__logo_text {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  color: #2f3137;
+}
+.footer__logo_border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  aspect-ratio: 1/1;
+  -webkit-transition: border 0.2s;
+  transition: border 0.2s;
+  border: solid 1px #2f3137;
+}
+.footer__info {
+  display: none;
+}
+@media (min-width: 960px) {
+  .footer__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.footer__info_text {
+  position: relative;
+  color: #2f3137;
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: inline-block;
+  min-width: 0;
+}
+.footer__info_text::before, .footer__info_text::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background: #2f3137;
+}
+.footer__info_text::before {
+  top: 50%;
+  -webkit-transform: translate(-110%, -50%);
+      -ms-transform: translate(-110%, -50%);
+          transform: translate(-110%, -50%);
+}
+.footer__info_text::after {
+  top: 50%;
+  -webkit-transform: translate(10%, -50%);
+      -ms-transform: translate(10%, -50%);
+          transform: translate(10%, -50%);
+}
+.footer__settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__settings_button {
+  max-width: 18rem;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.75rem 3rem;
+  border-radius: 2px;
+  border: solid 1px #2f3137;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+  -webkit-transition: color, border 0.2s;
+  transition: color, border 0.2s;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer__settings_button_input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+}
+.footer__settings_button_input:focus-visible {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.footer__settings_button_text {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.footer__settings_button_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: currentColor;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.footer__settings_button:hover, .footer__settings_button:has(input:checked) {
+  color: #fff;
+  border-color: #fff;
+}
+.footer__settings_button:has(input:focus-visible) {
+  -webkit-box-shadow: 0 0 0 2px #fff;
+          box-shadow: 0 0 0 2px #fff;
+}
+.footer__settings_button:has(input:checked) .footer__settings_button_icon {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.settings {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  max-width: 18rem;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  -webkit-box-shadow: #000 0 0 1rem 2px;
+          box-shadow: #000 0 0 1rem 2px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.5rem;
+  -webkit-transform: translateY(1rem);
+      -ms-transform: translateY(1rem);
+          transform: translateY(1rem);
+  padding: 1.25rem;
+}
+@media (min-width: 960px) {
+  .settings {
+    right: 3rem;
+  }
+}
+.settings__button {
+  text-transform: uppercase;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  background: transparent;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.settings__button:hover {
+  color: #fb9f22;
+}
+.settings__button_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: currentColor;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.footer:has(.footer__settings_button_input:checked) .settings {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  visibility: visible;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}

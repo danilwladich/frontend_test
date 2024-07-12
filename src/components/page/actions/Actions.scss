@@ -1,0 +1,32 @@
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	column-gap: 2rem;
+	row-gap: 0.75rem;
+	@media (min-width: 960px) {
+		justify-content: center;
+	}
+
+	&__button {
+		text-transform: uppercase;
+		padding: 0.75rem 3rem;
+		color: rgba(255, 255, 255, 0.5);
+		font-weight: 600;
+		font-size: 1rem;
+		border-radius: 2px;
+		background: transparent;
+		border: solid 1px #fff;
+		transition: color 0.2s;
+		&:hover {
+			color: #fff;
+			background: rgb(205, 116, 0);
+			background: linear-gradient(
+				125deg,
+				rgba(205, 116, 0, 1) 0%,
+				rgba(251, 159, 34, 1) 100%
+			);
+			border-color: #f4c586;
+		}
+	}
+}
